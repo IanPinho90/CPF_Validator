@@ -2,7 +2,7 @@ validade=False
 cpf=(input())
 cpfNovo=[]
 numCresc=["10","9","8","7","6","5","4","3","2"]
-numCresc1=['11','10','9','8','7','6','5','4','3','2']
+numCresc1=["11","10","9","8","7",'6','5','4','3','2']
 resultado=[]
 
 for i in cpf:
@@ -16,3 +16,7 @@ while validade==False:
     resto = soma%int(numCresc1[0])
     numero1=int(numCresc1[0])-int(resto)
     print(numero1)
+    resultado2 = list(map(lambda x,y: int(x)*int(y) ,numCresc1,cpfNovo))
+    resto2=sum(resultado2)%int(numCresc1[0])
+    numero2=int(numCresc1[0])-int(resto2)
+    print(numero2)
